@@ -8,7 +8,6 @@ while type(input_num) is not int:
     
 from random import randrange
 generated = randrange(input_num)
-print(generated)
 
 #user chooses number
 guess = None 

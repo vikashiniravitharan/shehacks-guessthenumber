@@ -1,0 +1,28 @@
+
+# Choose number - WORKING
+input_num = None
+while type(input_num) is not int:
+    input_num = input("Input a number 0 to:")
+    if input_num.isdigit():
+        input_num = int(input_num)
+    
+from random import randrange
+generated = randrange(input_num)
+print(generated)
+
+#user chooses number
+guess = None 
+while guess != generated:
+    guess = input("Guess the number in your range:")
+    if guess.isdigit() == False:
+        print('Error. Only integers are allowed')
+    elif int(guess) < generated:
+        print('Incorrect. The number is higher')
+    elif int(guess) > generated:
+    	print('Incorrect. The number is lower')
+    elif int(guess) == generated:
+        print('Congratulations! You guessed the number') 
+        break
+    else:
+        print("Input is not valid. Please enter an integer")
+print('Thanks for playing!')
